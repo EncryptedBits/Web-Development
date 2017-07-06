@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% load static %}
+		<title> Registration</title>
+		<link rel="icon" href="{% static './img/IITBHU_Logo.png' %}" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static './index_files/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './register2.css' %}">
+		<script src="{% static './jquery-1.11.3.min.js' %}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static './app.js' %}"></script>
+	</head>
+	
+	<body>
+
+		<!---header--->
+		<header class="container-fluid" id="hd">
+			<div class="row" >
+				
+				<div  class ="col-sm-1">
+					
+				</div>
+				<div  class ="col-sm-1 ">
+					<a href="http://iitbhu.ac.in"><img src="{% static './img/IITBHU_Logo2.png' %}" id="iitlogo"></a>
+				</div>
+				<div  class ="col-sm-1" id="hd2">
+					
+				</div>
+				
+				<div class="col-sm-9" id="hd4">
+					<h3>INDIAN INSTITUTE OF TECHNOLOGY</h3>
+					<h4>Banaras Hindu University,Varanasi</h4>
+				</div>
+				<div  class ="col-sm-1" id="hd5">
+					
+				</div>
+			</div>
+		</header>
+		<!--<div id="headLast"><h3>Mess Services</h3></div>-->
+		<!---NavBar--->
+		<div class="header" id="nav">
+			<div class="container-fluid">	
+				<ul class="menu" id="myTopnav">	
+					<li id="brand">IIT BHU | Messes</li>
+					<li><a id="home" href="http://iitbhu.ac.in/">IIT BHU</a></li>
+					<li id="title">Registration</li>
+				</ul>
+			</div>
+		</div>
+
+		{% if error_msg %}
+			<p> {{ error_msg }} </p>
+			{% endif %}
+		<!--form-->
+      <form action="/regstep2/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        <h1>Register Here</h1>
+        
+        <fieldset>
+          <legend><span class="number">#</span>Enter Your Detail</legend>
+
+
+			<label for="rollno">Roll No:</label>
+          <input type="text" id="rollno" name="user">
+
+			<label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" >
+
+            <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email">
+
+
+		  <label for="Roomno">Room Number:</label>
+          <input type="text" id="Roomno" name="Room_number">
+		  
+		  <label for="PhoneNo">Phone Number:</label>
+          <input type="text" id="Phoneno" name="Phone_number">
+		  
+          
+        <fieldset>
+        <label for="hostel">Hostel:</label>
+        <select id="hostel" name="hostel_name">
+          
+            <option value="Aryabhatta">Aryabhatta</option>
+            <option value="S.N.Bose">S.N.Bose</option>
+            <option value="Ramanujan">Ramanujan</option>
+            <option value="Vishwashraiya">Vishwashraiya</option>
+            <option value="Rajputana">Rajputana</option>
+            <option value="Limbadi">Limbadi</option>
+			<option value="D.G.Hostel">D.G.Hoatel</option>
+			
+          
+          
+        </select>
+
+        
+          
+          <label for="mess">Mess:</label>
+        <select id="mess" name="user_mess">
+
+            <option value="Aryabhatta">Aryabhatta</option>
+            <option value="S.N.Bose">S.N.Bose</option>
+            <option value="Ramanujan">Ramanujan</option>
+            <option value="Vishwashraiya">Vishwashraiya</option>
+            <option value="Rajputana">Rajputana</option>
+            <option value="Limbadi">Limbadi</option>
+			<option value="D.G.Hostel">D.G.Hoatel</option>
+
+
+
+        </select>
+       
+        <label for="Branch">Branch:</label>
+        <select id="Branch" name="Branch_name">
+          
+            <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
+            <option value="Maths & Computing">Maths & Computing</option>
+            <option value="Pharmaceutics">Pharmaceutics</option>
+			<option value="Ceramics">Ceramics</option>
+			<option value="Chemical">Chemical</option>
+			<option value="Mining">Mining</option>
+			<option value="Metallurgy">Metallurgy</option>
+			
+          
+          
+        </select>
+        
+          
+         
+     
+        <label for="Year">Sememster:</label>
+        <select id="Year" name="Year" >
+          
+            <option value="1">1</option>
+            <option value="3">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+			
+          
+          
+        </select>
+        
+    Select image to your upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</fieldset>
+</fieldset>
+        <button type="submit">Register</button>
+      </form>
+		<!---Footer--->
+		<footer>
+		<h4>
+			&copy Indian Institute of Technology (BHU) Varanasi 2016
+		</h4>
+		</footer>
+	</body>
+</html>

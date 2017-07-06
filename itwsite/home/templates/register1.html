@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% load static %}
+		<title> Registration </title>
+		<link rel="icon" href="{% static './img/IITBHU_Logo.png' %}" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static  './index_files/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static  './register1.css' %}">
+		<script src="{% static  './jquery-1.11.3.min.js' %}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static  './app.js' %}"></script>
+	</head>
+	
+	<body>
+
+		<!---header--->
+		<header class="container-fluid" id="hd">
+			<div class="row" >
+				
+				<div  class ="col-sm-1">
+					
+				</div>
+				<div  class ="col-sm-1 ">
+					<a href="http://iitbhu.ac.in"><img src="{% static  './img/IITBHU_Logo2.png' %}" id="iitlogo"></a>
+				</div>
+				<div  class ="col-sm-1" id="hd2">
+					
+				</div>
+				
+				<div class="col-sm-9" id="hd4">
+					<h3>INDIAN INSTITUTE OF TECHNOLOGY</h3>
+					<h4>Banaras Hindu University,Varanasi</h4>
+				</div>
+				<div  class ="col-sm-1" id="hd5">
+					
+				</div>
+			</div>
+		</header>
+		<!--<div id="headLast"><h3>Mess Services</h3></div>-->
+		<!---NavBar--->
+		<div class="header" id="nav">
+			<div class="container-fluid">	
+				<ul class="menu" id="myTopnav">	
+					<li id="brand">IIT BHU | Messes</li>
+					<li><a id="home" href="http://iitbhu.ac.in/">IIT BHU</a></li>
+					<li id="title">Registration</li>
+				</ul>
+			</div>
+
+
+		</div>
+
+		{% if error_msg %}
+			<p> {{ error_msg }} </p>
+			{% endif %}
+		<!--form-->
+      <form  method="POST"  action="/regstep1/">
+		  {% csrf_token %}
+      
+        <h1>Register Here</h1>
+        
+        <fieldset>
+          <legend><span class="number">#</span>Enter Your Detail</legend>
+          <label for="name">Roll No:</label>
+          <input type="text" id="name" name="roll_no">
+
+		  
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" >
+		  
+          <!--<label for="password">Re-Password:</label>
+          <input type="password" id="password" name="user_password2">-->
+		  
+        <button type="submit">Next Step</button>
+      </form>
+      
+		<!---Footer--->
+		<footer>
+		<h4>
+			&copy Indian Institute of Technology (BHU) Varanasi 2016
+		</h4>
+		</footer>
+	</body>
+</html>

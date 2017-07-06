@@ -1,0 +1,57 @@
+/* body */
+
+body{
+    background-color:#eeeeee;
+
+}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+/* Header */
+
+#hd{
+	/*background-color:#dddddd !important;*/
+	background-color:brown;
+}
+#hd2{
+	width:250px;
+}
+#hd4{
+	width:auto;
+}
+header h3{
+	margin-top:25px;
+	font-style:strong;
+	color:white;
+	margin-bottom:0px;
+}
+header h4{
+	margin:0px;
+	margin-left:70px;
+	color:white;
+}
+#iitlogo {
+	width:90px;
+	height:90px;
+}
+#hmm{
+	height:150px;
+	width:25%;
+	background-color:red;
+	float:right;
+}
+/*Footer*/
+footer {
+  width: 100%;
+  background-color: brown;
+  padding:10px 5px;
+  text-align:center;
+}
+footer h4{
+	color:white;
+}

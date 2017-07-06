@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<title>Mess Maharaj</title>
+		<link rel="icon" href="{% static './img/IITBHU_Logo.png' %}" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static './index_files/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './mess_maharaj.css' %}">
+		<script src="{% static './jquery-1.11.3.min.js' %}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static './app.js' %}"></script>
+	</head>
+
+	<body>
+
+		<!---header--->
+		<header class="container-fluid" id="hd">
+			<div class="row" >
+
+				<div  class ="col-sm-1">
+
+				</div>
+				<div  class ="col-sm-1 ">
+					<a href="http://iitbhu.ac.in"><img src="{% static './img/IITBHU_Logo2.png' %}" id="iitlogo"></a>
+				</div>
+				<div  class ="col-sm-1" id="hd2">
+
+				</div>
+
+				<div class="col-sm-9" id="hd4">
+					<h3>INDIAN INSTITUTE OF TECHNOLOGY</h3>
+					<h4>Banaras Hindu University,Varanasi</h4>
+				</div>
+				<div  class ="col-sm-1" id="hd5">
+
+				</div>
+			</div>
+		</header>
+		<!--<div id="headLast"><h3>Mess Services</h3></div>-->
+		<!---NavBar--->
+		<div class="header" id="nav">
+			<div class="container-fluid">
+				<ul class="menu" id="myTopnav">
+					<li id="brand">IIT BHU | Messes</li>
+					<li><a id="home" href="http://iitbhu.ac.in/">IIT BHU</a></li>
+					<li id="title"><b>Dg Mess II</b></li>
+					<li id="login"><a href="index.html">Log out</a></li>
+					<li id="login"><a href="menu.html">Menu</a></li>
+					<li id="login" ><a href="#myBtn" class="show" id="myBtn"><span></span>Add Extra</a></li>
+                    <li id="login" ><a href="/maharaj/comp_pro/" class="show" id="myBtn"><span></span>Complete Profile</a></li>
+					<li class="icon">
+						<a href="#respon" id="respon">&#9776;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header" style="padding:35px 50px;">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4><span></span>Add Extra</h4>
+					</div>
+					<div class="modal-body" style="padding:40px 50px;">
+					<form role="form" action="profile.html">
+						<div class="form-group">
+							<label for="roll_no"><span class="glyphicon glyphicon-user"></span>Roll No</label>
+							<input type="text" class="form-control" id="usrname" placeholder="Roll No">
+						</div>
+						<div class="form-group">
+							<label for="amount"><span class="glyphicon glyphicon-user"></span>Amount</label>
+							<input type="text" class="form-control" id="usrname" placeholder="Amount">
+						</div>
+						<button type="submit" class="btn btn-success btn-block" id="loginBtn"><span></span>Add extra</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--- Contents-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="{ static './img/animesh.jpg' %}" height="500" width="380"alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h2>{{ mm.maharaj_name }}</h2>
+                        <small><cite title="IIT BHU,Varanasi"><i class="glyphicon glyphicon-map-marker"></i>&nbsp &nbsp IIT BHU,Varanasi
+                        </cite></small>
+						</br>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>&nbsp {{ mm.user.username }}
+                            <br />
+                            <i class="glyphicon glyphicon-gift"></i>&nbsp {{mm.maharaj_mob}} </p>
+                    </div>
+                </div>
+            </div>
+			<div>
+			<form action="Chat_box.html">
+			<button value="submit" class="btn btn-primary" id="suggest">Read Suggestions</button>
+			</form>
+			</div>
+        </div>
+		<div id="billing">
+			<ul id="expense">
+				<li class="item"><b>Students Enrolled:12000</b></li>
+				<li class="item"><b>Students Offed:2206</b></li>
+				<li class="item"><b>To eat today:9794</b></li>
+				<li class="item"><b>Veg Students:9794</b></li>
+				<li class="item"><b>Non-Veg Students:9794</b></li>
+			</ul>
+			<form action="menu.html">
+			<button value="submit" class="btn btn-primary" id="bill">Students offed today</button>
+			</form>
+		</div>
+    </div>
+</div>
+		<!---Footer--->
+		<footer>
+		<h4>
+			&copy Indian Institute of Technology (BHU) Varanasi 2016
+		</h4>
+		</footer>
+	</body>
+</html>

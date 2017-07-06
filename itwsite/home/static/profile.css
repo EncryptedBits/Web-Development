@@ -1,0 +1,247 @@
+/* body */
+
+body{
+    background-color:#eeeeee;
+
+}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+/* Header */
+
+#hd{
+	/*background-color:#dddddd !important;*/
+	background-color:brown;
+}
+#hd2{
+	width:250px;
+}
+#hd4{
+	width:auto;
+}
+header h3{
+	margin-top:25px;
+	font-style:strong;
+	color:white;
+	margin-bottom:0px;
+}
+header h4{
+	margin:0px;
+	margin-left:70px;
+	color:white;
+}
+#iitlogo {
+	width:90px;
+	height:90px;
+	
+}
+#headLast{
+	background-color:#D09E9E;
+}
+#headLast h3{
+	color:#F2F7A7;
+	margin-left:47%;
+	margin-bottom:3px;
+	margin-top:3px;
+}
+/* Nav */
+
+#nav{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  background: rgba(206,199,236,1);
+  background: -moz-linear-gradient(top, rgba(206,199,236,1) 8%, rgba(206,199,236,1) 31%, rgba(216,208,239,1) 48%, rgba(235,233,249,1) 93%, rgba(235,233,249,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(8%, rgba(206,199,236,1)), color-stop(31%, rgba(206,199,236,1)), color-stop(48%, rgba(216,208,239,1)), color-stop(93%, rgba(235,233,249,1)), color-stop(100%, rgba(235,233,249,1)));
+background: -webkit-linear-gradient(top, rgba(206,199,236,1) 8%, rgba(206,199,236,1) 31%, rgba(216,208,239,1) 48%, rgba(235,233,249,1) 93%, rgba(235,233,249,1) 100%);
+background: -o-linear-gradient(top, rgba(206,199,236,1) 8%, rgba(206,199,236,1) 31%, rgba(216,208,239,1) 48%, rgba(235,233,249,1) 93%, rgba(235,233,249,1) 100%);
+background: -ms-linear-gradient(top, rgba(206,199,236,1) 8%, rgba(206,199,236,1) 31%, rgba(216,208,239,1) 48%, rgba(235,233,249,1) 93%, rgba(235,233,249,1) 100%);
+background: linear-gradient(to bottom, rgba(206,199,236,1) 8%, rgba(206,199,236,1) 31%, rgba(216,208,239,1) 48%, rgba(235,233,249,1) 93%, rgba(235,233,249,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cec7ec', endColorstr='#ebe9f9', GradientType=0 );
+  
+  font-size: 17px;
+  padding-top:15px;
+  
+}
+
+#nav .menu {
+  
+  list-style-type: none;
+  
+}
+#title{
+	margin-left:20%;
+	color:white;
+	text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px red;
+	font-size:100%;
+}
+#login{
+	float:right;
+}
+
+#brand{
+	color:white;
+	background-color:grey;
+	padding-top:16px;
+	padding-bottom:14px;
+	border-left:1px;
+	border-right:1px;
+	border-top:1px;
+	border-bottom:1px;
+}
+
+.menu  > li{
+	
+	display: inline;
+  
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#home{
+	
+	padding-top:35px;
+}
+
+
+
+.menu a {
+	text-align: center;
+    
+  color: #898989;
+  text-decoration:none;
+}
+
+/*Fixed Nav*/
+
+.sticky {
+  position: fixed;
+  top:0;
+  z-index: 1;
+  width:100%;
+}
+
+/*Responsive Nav Bar*/
+
+ul.menu li.icon {display: none;}
+
+@media screen and (max-width:800px) {
+  ul.menu li:not(:first-child) {display: none;}
+  ul.menu li.icon {
+    float: right;
+    display: inline-block;
+  }
+  
+}
+
+@media screen and (max-width:800px) {
+  ul.menu.responsive {position: relative;}
+  ul.menu.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.menu.responsive li{
+    float: none;
+    display: inline;
+  }
+  ul.menu.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  
+}
+
+.show{
+	display:block !important;
+}
+.hide{
+	display:none !important;
+}
+  
+/*Modal*/
+
+.modal-header, .modal-header h4, .close {
+      background-color: #222;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  
+  .modal-body button{
+	  font-size:20px;
+  }
+  
+  .modal-footer {
+      background-color: #222;
+  }
+ /*
+	Ratings Stars
+	(with as little code as possible)
+*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0; 
+   color: gold;
+}
+/*contents */
+#billing{
+	margin-top:10px;
+	width:40%;
+	text-align:centre;
+	float:right;
+}
+#expense{
+	list-style-type:none;
+}
+#bill{
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+.item{
+	padding:28px;
+	text-align:center;
+	background-color:#DEF3CA;
+	border: 2px solid #E7EFE0;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+}
+#button{
+	margin-left:10px;
+	margin-bottom:20px;
+}
+/*Footer*/
+footer {
+  width: 100%;
+  background-color: brown;
+  padding:10px 5px;
+  text-align:center;
+}
+footer h4{
+	color:white;
+}

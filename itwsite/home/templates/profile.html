@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/User/Desktop/HostelManagement/index.html -->
+<html lang="en">
+	{% load static %}
+	<head>
+		<title> Profile </title>
+		<link rel="icon" href="{% static './img/IITBHU_Logo.png' %}" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static './index_files/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './css/profile.css' %}">
+		<script src="{% static './jquery-1.11.3.min.js'%}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static './js/app.js' %}"></script>
+	</head>
+	
+	<body>
+		
+		<!---header-->
+		<header class="container-fluid" id="hd">
+			<div class="row" >
+				
+				<div  class ="col-sm-1">
+					
+				</div>
+				<div  class ="col-sm-1 ">
+					<a href="http://iitbhu.ac.in"><img src="{% static './img/IITBHU_Logo2.png' %}" id="iitlogo"></a>
+				</div>
+				<div  class ="col-sm-1" id="hd2">
+					
+				</div>
+				
+				<div class="col-sm-9" id="hd4">
+					<h3>INDIAN INSTITUTE OF TECHNOLOGY</h3>
+					<h4>Banaras Hindu University,Varanasi</h4>
+				</div>
+				<div  class ="col-sm-1" id="hd5">
+					
+				</div>
+			</div>
+		</header>
+		<!-- body content -->
+		<!--nav-->
+		<div class="header" id="nav">
+			<div class="container-fluid">	
+				<ul class="menu" id="myTopnav">	
+					<li id="brand">IIT BHU | Messes</li>
+					<li><a id="home" href="http://iitbhu.ac.in/">IIT BHU</a></li>
+					<li id="title"><b>{{ NewUsr.user_mess }}</b></li>                                      <!-- -->
+					<li id="menu"><a href="/logout/">Log Out</a></li>
+					<li id="menu"><a href="/menu">Menu</a></li>
+					<li id="menu"><a href="#">Mess off</a></li>
+                    <li id="menu" ><a href="/chat/" class="show" id="myBtn"><span></span>Chat</a></li>
+				</ul>
+			</div>
+		</div>
+		<!---nav-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="{% static './img/animesh.jpg' %}" height="500" width="380"alt="" class="img-rounded img-responsive" />
+                    </div>
+					<div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div>
+                    <div class="col-sm-6 col-md-8">
+                        <h2>{{ NewUsr.user_name }}</h2>                                                    <!-- -->
+                        <small><cite title="IIT BHU,Varanasi"><i class="glyphicon glyphicon-map-marker"></i>&nbsp &nbsp IIT BHU,Varanasi
+                        </cite></small>
+						</br>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>&nbsp{{ NewUsr.user_email }}              <!-- -->
+                            <br />
+                            <i class="glyphicon glyphicon-gift"></i>&nbsp September 03, 1997</p>                   <!-- -->
+                        <!-- Split button --
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary">
+                                Social</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Social</span>
+                            </button>
+							<ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Veg</a></li>
+                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">NonVeg</a></li>
+                            </ul>
+                        </div -->
+						</br>
+							<h4>Meal Type</h4>
+							<form action="" method="get">
+								<input type="radio" name="vegtype">&nbsp<label value="False">Veg</label></input>
+								<input type="radio" name="vegtype">&nbsp<label value="True">Non-Veg</label></input>
+							</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div id="billing">
+			<ul id="expense">
+				<li class="item"><b>Balance: {{ NewUsr.user_balance }} </b></li>     <!-- -->
+				<li class="item"><b>Expended:{{ NewUsr.user_expense }}</b></li>			 <!-- -->
+				<li class="item"><b>Amount Left: {{ NewUsr.user_expense }}</b></li>			 <!-- -->
+			</ul>
+			<form action="menu.html">
+				{% csrf_token %}
+			<button value="submit" class="btn btn-primary" id="bill">Month wise bill</button>
+			</form>
+		</div>
+    </div>
+	<div id="comment">
+	<form action="#">
+	<h4><font color="green">Suggestions</font></h4>
+		<textarea rows="4" cols="77"placeholder="Your Suggestions for better services....."></textarea>
+		<button type="submit" class="btn btn-primary" id="button">Submit</button>
+		</form>
+	</div>
+</div>
+<!--body content-->
+		<!--Footer-->
+		<footer>
+		<h4>
+			&copy Indian Institute of Technology (BHU) Varanasi 2016
+		</h4>
+		</footer>
+	</body>
+</html>

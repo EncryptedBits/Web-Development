@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/User/Desktop/HostelManagement/index.html -->
+<html lang="en">
+	
+	<head>
+		{% load static %}
+		<title> IIT BHU | Mess Services </title>
+		<link rel="icon" href="{% static './img/IITBHU_Logo.png'%}" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static './index_files/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static './main.css'%}">
+		<script src="{% static './jquery-1.11.3.min.js'%}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static './app.js'%}"></script>
+	</head>
+	
+	<body>
+		
+		<!---header--->
+		<header class="container-fluid" id="hd">
+			<div class="row" >
+				
+				<div  class ="col-sm-1">
+					
+				</div>
+				<div  class ="col-sm-1 ">
+					<a href="http://iitbhu.ac.in"><img src="{% static './img/IITBHU_Logo2.png'%}" id="iitlogo"></a>
+				</div>
+				<div  class ="col-sm-1" id="hd2">
+					
+				</div>
+				
+				<div class="col-sm-9" id="hd4">
+					<h3>INDIAN INSTITUTE OF TECHNOLOGY</h3>
+					<h4>Banaras Hindu University,Varanasi</h4>
+				</div>
+				<div  class ="col-sm-1" id="hd5">
+					
+				</div>
+			</div>
+		</header>
+		<!--<div id="headLast"><h3>Mess Services</h3></div>-->
+		<!---NavBar--->
+		<div class="header" id="nav">
+			<div class="container-fluid">	
+				<ul class="menu" id="myTopnav">	
+					<li id="brand">IIT BHU | Messes</li>
+					<li><a id="home" href="http://iitbhu.ac.in/">IIT BHU</a></li>
+					<li id="title">Mess Services</li>
+					<li id="login"><a href="/signup">Register</a></li>
+					<li id="login" ><a href="#myBtn" class="show" id="myBtn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li class="icon">
+						<a href="#respon" id="respon">&#9776;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header" style="padding:35px 50px;">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+					</div>
+					<div class="modal-body" style="padding:40px 50px;">
+					<form role="form" action="/login" method="post">
+						{% csrf_token %}
+						<div class="form-group">
+							<label for="roll_no"><span class="glyphicon glyphicon-user"></span> Roll No</label>
+							<input type="text" name="roll_no" class="form-control" id="usrname" placeholder="Enter Insti Roll No...">
+						</div>
+						<div class="form-group">
+							<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+							<input type="password" name="pswd" class="form-control" id="password" placeholder="Enter password">
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" value="" checked>Remember me</label>
+						</div>
+							<button type="submit" class="btn btn-success btn-block" id="loginBtn"><span class="glyphicon glyphicon-off" ></span> Login</button>
+					</form>
+					</div>
+					<div class="modal-footer">
+						
+						<p><a href="#">Forgot Password?</a></p>
+					</div>
+				</div>
+      
+			</div>
+		</div>
+		<!---Carousel--->
+		<section class="container-fluid" id="topsec">
+		<div class="row">
+		<div class="col-sm-2" id="hlist"> 
+				<ul>
+					<li><a href="/maharaj_login">C.V. Raman</a></li>
+					<li><a href="/maharaj_login">Dhanrajgiri</a></li>
+					<li><a href="/maharaj_login">Limbdi</a></li>
+					<li><a href="/maharaj_login">Morvi</a></li>
+					<li><a href="/maharaj_login">GSMC</a></li>
+					<li><a href="/maharaj_login">Rajputana</a></li>
+					<li><a href="/maharaj_login">S Ramanujan</a></li>
+					<li><a href="/maharaj_login">S.C. De</a></li>
+					<li><a href="/maharaj_login">S.N. Bose</a></li>
+					<li><a href="/maharaj_login">Vishwakarma</a></li>
+					<li><a href="/maharaj_login">Vishweshvarayya</a></li>
+					<li><a href="/maharaj_login">Vivekanand</a></li>
+				</ul>
+			</div>
+			<div id="gallery" class="col-sm-10"> 
+			<div id="notice"><h2><u>Notice</u></h2>
+			<ul>
+				<li><h3>Students will submit there Photographs (passport size) and one photocopy of their I-card to respective messes.</h3></li>
+				<li><h3>Messes will start from 01/08/2016 . Untill you have to pay for the services.</h3></li>
+			</ul>
+			</div>
+			<!---Carousel--->
+		<div id="carousel" class="carousel slide"  data-ride="carousel">
+		<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+				<li data-target="#carousel" data-slide-to="2"></li>
+				<li data-target="#carousel" data-slide-to="3"></li>
+				<li data-target="#carousel" data-slide-to="4"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="{% static './img/bhu_vt_arieal_view_0.jpg' %}" alt="...">
+      
+				</div>
+				<div class="item">
+					<img src="{% static './img/26.jpg' %}" alt="...">
+      
+				</div>
+				<div class="item">
+					<img src="{% static './img/ganga.jpg' %}" alt="...">
+      
+				</div>
+				<div class="item">
+					<img src="{% static './img/mechanical deptt.jpg' %}" alt="...">
+      
+				</div>
+				<div class="item">
+					<img src="{% static './img/Varanasi-temple-new-Vishwanath-Temple.jpg'%}" alt="...">
+      
+				</div>
+			</div>
+ 
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div> <!-- Carousel -->
+			
+			</div>
+			</div>
+		</section>
+		<!-- Carousel -->
+		<!---Footer--->
+		<footer>
+		<h4>
+			&copy Indian Institute of Technology (BHU) Varanasi 2016
+		</h4>
+		</footer>
+	</body>
+</html>
